@@ -21,9 +21,17 @@ class VolumeCalculator(object):
         return total
 
 def main():
-    shapes = [Beam(5, 8, 10), Beam(14, 8, 10)]
-    calculator = AreaCalculator(shapes)
-    print ("The total area is: ", calculator.total_area)
+    base1 = int(input())
+    width1 = int(input())
+    height1 = int(input())
+
+    base2 = int(input())
+    width2 = int(input())
+    height2 = int(input())
+    
+    shapes = [Beam(base1, width1, height1), Beam(base2, width2, height2)]
+    calculator = VolumeCalculator(shapes)
+    print ("The total area is: ", calculator.total_volume)
 
 if __name__ == '__main__':
 
