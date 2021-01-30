@@ -20,14 +20,20 @@ class VolumeCalculator(object):
 
         return total
 
+def check_number(number):
+    if (number is not None):
+        if (number > 0):
+            return number
+        
 def main():
-    base1 = int(input())
-    width1 = int(input())
-    height1 = int(input())
+    base1 = check_number(float(input()))
+    print(base1)
+    width1 = check_number(float(input()))
+    height1 = check_number(float(input()))
 
-    base2 = int(input())
-    width2 = int(input())
-    height2 = int(input())
+    base2 = check_number(float(input()))
+    width2 = check_number(float(input()))
+    height2 = check_number(float(input()))
     
     shapes = [Beam(base1, width1, height1), Beam(base2, width2, height2)]
     calculator = VolumeCalculator(shapes)
